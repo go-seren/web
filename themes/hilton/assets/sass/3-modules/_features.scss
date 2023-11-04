@@ -1,0 +1,102 @@
+.section-features {
+  margin: 120px 0;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--background-alt-color);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+  margin: 80px 0;
+  max-width: 75%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--reverse {
+    .feature__image { order: 2; } /* image will be placed second */
+    .feature__content { order: 1; } /* content will be placed first */
+  }
+
+  @media only screen and (max-width: $desktop) {
+    /* Adjust grid gap for desktop size if needed */
+    gap: 20px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    /* Switch to a single column layout on tablet size */
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: 60px 0;
+    .feature__image { order: 1; margin-bottom: 20px; } /* image will be placed second */
+    .feature__content { order: 2; }
+  }
+}
+
+.feature__image {
+  /* No need to specify flex as we are now using grid */
+  padding: 0 15px;
+
+  img {
+    width: 100%;
+    max-height: 364px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  @media only screen and (max-width: $desktop) {
+    img {
+      max-height: 330px;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    img {
+      max-height: 315px;
+    }
+
+    /* Adjust padding and image sizing for mobile */
+    @media only screen and (max-width: $mobile) {
+      padding: 0 10px;
+      img {
+        max-height: 210px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.feature__content {
+  /* No need to specify flex as we are now using grid */
+  padding: 0 15px;
+  .feature__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .feature__description {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    .feature__title {
+      font-size: 24px; /* Adjusted font size for titles on mobile */
+    }
+    .feature__description {
+      font-size: 16px; /* Adjusted font size for descriptions on mobile */
+    }
+  }
+}

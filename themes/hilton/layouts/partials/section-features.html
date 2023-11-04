@@ -1,0 +1,19 @@
+{{ if .Site.Params.features.enable }}
+<!-- begin section-features -->
+<section class="section-features">
+  <div class="container features">
+    {{ range $index, $element := .Site.Params.features.list }}
+    <div class="feature {{ if modBool $index 2 }}feature--reverse{{ end }}">
+      <div class="feature__image">
+        <img class="lazy" data-src="{{ $element.image }}" alt="{{ $element.title }}">
+      </div>
+      <div class="feature__content">
+        <h2 class="feature__title">{{ $element.title }}</h2>
+        <p class="feature__description">{{ $element.description }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+<!-- end section-features -->
+{{ end }}

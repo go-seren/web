@@ -1,0 +1,178 @@
+#-------------------------------
+# General Site Settings
+baseURL = "http://goseren.com"
+languageCode = "en-us"
+title = "Seren"
+googleAnalytics = "" # Add your identifier. For example UA-99631805-1.
+paginate = 6
+
+
+[params]
+  logo = "/images/icon.png" # You can add own logo. For example "/images/logo.png".
+  description = "Seren: AI Chat Diary"
+  color_scheme = "dark" # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+
+
+#-------------------------------
+# Main Menu
+[menu]
+
+      # Footer Menu
+      [[menu.footer]]
+      identifier = "home"
+      name = "Home"
+      url = "/"
+      weight = 1
+
+      [[menu.footer]]
+      identifier = "status"
+      name = "Service status"
+      url = "https://status.goseren.com/status/seren"
+      weight = 5
+
+      [[menu.footer]]
+      identifier = "privacy"
+      name = "Privacy Policy"
+      url = "/privacy/"
+      weight = 5
+
+
+
+  #-------------------------------
+  # Author Settings
+  [params.author]
+    author__name = "Seren: AI Chat Journal"
+    author__bio = ""
+    author__avatar = "/images/icon.png"
+
+  # Social Links
+
+  [[params.social]]
+    icon = "ion-logo-instagram"
+    name = "Instagram"
+    link = "https://instagram.com/go_seren"
+
+
+  #-------------------------------
+  # Hero Settings
+  [params.hero]
+    enable = true
+    hero__title = "Interactive Self-Reflection"
+    hero__description = "Discover the art of modern journaling, where each check-in is amplified by AI's intuitive understanting, bringing you closer to your inner self."
+    hero__image = "/images/phone.png"
+
+#-------------------------------
+# Features Settings
+[params.features]
+  enable = true
+  [[params.features.list]]
+    title = "Beyond One Voice"
+    description = "Engage with diverse facets of your thoughts and emotions."
+    image = "/images/feature1.png"
+
+  [[params.features.list]]
+    title = "Forever Privacy First"
+    description = "Encrypted, safe and never shared."
+    image = "/images/feature2.png"
+
+  [[params.features.list]]
+    title = "Speak Your Mind"
+    description = "Dictate thoughts directly, effortlessly transcribed."
+    image = "/images/feature3.png"
+
+
+  #-------------------------------
+  # Newsletter Settings
+  [params.mailchimp]
+    enable = false
+    mailchimp__identifier = "frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3" # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
+    mailchimp__input__text = "Your email address..."
+    mailchimp__button__text = "Get updates" # Add your button text
+
+
+  #-------------------------------
+  # Projects Settings
+  [params.projects]
+    enable = true
+    projects__title= "Latest works"
+    projects__description= "I shows only the best websites and portfolios built completely with passion, simplicity & creativity!"
+
+
+  #-------------------------------
+  # Testimonials Section
+  [params.testimonials]
+    enable = false
+    testimonial__title = "What clients say"
+    testimonial__description = ""
+
+  [[params.testimonial_item]]
+    name = "Aspen Carder"
+    image = "https://via.placeholder.com/200x200"
+    designation = "Lettering Artist"
+    link = "https://twitter.com/"
+    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+
+  [[params.testimonial_item]]
+    name = "Lydia Siphron"
+    image = "https://via.placeholder.com/200x200"
+    designation = "Designer"
+    link = "https://facebook.com/"
+    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+
+  [[params.testimonial_item]]
+    name = "Craig Vaccaro"
+    image = "https://via.placeholder.com/200x200"
+    designation = "Web developer"
+    link = "https://twitter.com/"
+    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+
+  [[params.testimonial_item]]
+    name = "Anika Calzoni"
+    image = "https://via.placeholder.com/200x200"
+    designation = "Lettering Artist"
+    link = "https://facebook.com/"
+    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+
+  [[params.testimonial_item]]
+    name = "Marcus Botosh"
+    image = "https://via.placeholder.com/200x200"
+    designation = "Full Stack Designer"
+    link = "https://twitter.com/"
+    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+
+
+  #-------------------------------
+  # Blog Section
+  [params.blog]
+    enable = false
+    blog__title = "Recent Posts"
+    blog__description = ""
+
+
+  #-------------------------------
+  # Gallery Footer Settings
+  [params.gallery]
+    enable = false
+
+
+  #-------------------------------
+  # Contact Settings
+  [params.contact]
+    contact__email = "albert@goseren.com" # Add your form_id
+
+  #-------------------------------
+  # Comment Section (Disqus)
+  [params.disqus]
+    enable = false
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  noClasses = false
