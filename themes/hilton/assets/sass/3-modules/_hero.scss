@@ -38,7 +38,6 @@
   height: 634px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   user-select: none;
 
   img {
@@ -68,6 +67,7 @@
 }
 
 .hero__right {
+  width: 100%;
   max-width: 575px;
   margin-left: auto;
 
@@ -82,7 +82,8 @@
   .store-images {
 
     .store-image {
-      width: 150px;
+      height: 50px;
+      margin-right: 20px;
     }
   }
 }

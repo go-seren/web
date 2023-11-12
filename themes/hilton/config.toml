@@ -10,7 +10,7 @@ paginate = 6
 [params]
   logo = "/images/icon.png" # You can add own logo. For example "/images/logo.png".
   description = "Seren: AI Chat Diary"
-  color_scheme = "dark" # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+  color_scheme = "auto" # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 
 
 #-------------------------------
@@ -28,7 +28,7 @@ paginate = 6
       identifier = "status"
       name = "Service status"
       url = "https://status.goseren.com/status/seren"
-      weight = 5
+      weight = 4
 
       [[menu.footer]]
       identifier = "privacy"
@@ -65,80 +65,74 @@ paginate = 6
 # Features Settings
 [params.features]
   enable = true
+    [[params.features.list]]
+    title = "Let AI guide your journey"
+    description = "Dictate thoughts directly, effortlessly transcribed. AI will help you explore your thoughts and emotions more deeply."
+    image = "/images/feature3.png"
+
   [[params.features.list]]
     title = "Beyond One Voice"
-    description = "Engage with diverse facets of your thoughts and emotions."
+    description = "Engage with diverse facets of your thoughts and emotions. They will help you uncover new insights."
     image = "/images/feature1.png"
 
   [[params.features.list]]
     title = "Forever Privacy First"
-    description = "Encrypted, safe and never shared."
+    description = "A secure space. All your check ins and conversations are safely encrypted and never shared. Your thoughts remain your own, secure and private."
     image = "/images/feature2.png"
 
-  [[params.features.list]]
-    title = "Speak Your Mind"
-    description = "Dictate thoughts directly, effortlessly transcribed."
-    image = "/images/feature3.png"
+
 
 
   #-------------------------------
   # Newsletter Settings
   [params.mailchimp]
     enable = false
-    mailchimp__identifier = "frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3" # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
-    mailchimp__input__text = "Your email address..."
-    mailchimp__button__text = "Get updates" # Add your button text
 
 
   #-------------------------------
   # Projects Settings
   [params.projects]
-    enable = true
+    enable = false
     projects__title= "Latest works"
     projects__description= "I shows only the best websites and portfolios built completely with passion, simplicity & creativity!"
 
 
-  #-------------------------------
+#-------------------------------
   # Testimonials Section
   [params.testimonials]
-    enable = false
-    testimonial__title = "What clients say"
+    enable = true
+    testimonial__title = "What do users say"
     testimonial__description = ""
 
   [[params.testimonial_item]]
-    name = "Aspen Carder"
-    image = "https://via.placeholder.com/200x200"
-    designation = "Lettering Artist"
-    link = "https://twitter.com/"
-    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+    name = "Natasha"
+    designation = "Amsterdam"
+    content = "I was journaling on paper and didn't really want to do it on my phone but after some time, it's actually so nice!"
 
   [[params.testimonial_item]]
-    name = "Lydia Siphron"
-    image = "https://via.placeholder.com/200x200"
-    designation = "Designer"
-    link = "https://facebook.com/"
-    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+    name = "Henny"
+    designation = "Bali"
+    content = "Wasn't sure what to expect, but this app's kinda become my daily de-stress ritual. I just talk to it and it actually gives me good feedback"
 
   [[params.testimonial_item]]
-    name = "Craig Vaccaro"
-    image = "https://via.placeholder.com/200x200"
-    designation = "Web developer"
-    link = "https://twitter.com/"
-    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+    name = "Clément"
+    designation = "Paris"
+    content = "It's kinda fun seeing what the AI comes back with, not half bad."
 
   [[params.testimonial_item]]
-    name = "Anika Calzoni"
-    image = "https://via.placeholder.com/200x200"
-    designation = "Lettering Artist"
-    link = "https://facebook.com/"
-    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+    name = "Sandra"
+    designation = "Barcelona"
+    content = "It's cool to chat with your past self :)"
 
   [[params.testimonial_item]]
-    name = "Marcus Botosh"
-    image = "https://via.placeholder.com/200x200"
-    designation = "Full Stack Designer"
-    link = "https://twitter.com/"
-    content = "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+    name = "Micaela"
+    designation = "Porto Alegre"
+    content = "I don't journal often, but when I do it's useful and helps me relax!"
+
+  [[params.testimonial_item]]
+    name = "Killian"
+    designation = "Bayonne"
+    content = "Great for my introvert days 🥺"
 
 
   #-------------------------------

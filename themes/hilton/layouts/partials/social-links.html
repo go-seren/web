@@ -2,13 +2,21 @@
 {{ with .Site.Params.social }}
 <div class="social">
   <ul class="social__list list-reset">
+    <a target="_blank" href="https://apps.apple.com/nl/app/seren-ai-chat-journal/id6449434828">
+      <img class="lazy store-image" data-src="/images/apple.svg" alt="Seren Apple App Store" />
+    </a>
+    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.goseren.seren">
+      <img class="lazy store-image" data-src="/images/google.png" alt="Seren Google Play Store" />
+    </a>
     {{ range . }}
     <li class="social__item">
       <a class="social__link" href="{{ .link }}" target="_blank" rel="noopener"
         aria-label="{{ .name }} link"><i class="ion {{ .icon }}"></i></a>
     </li>
     {{ end }}
+
   </ul>
+
 </div>
 {{ end }}
 {{ end }}

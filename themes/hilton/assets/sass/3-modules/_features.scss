@@ -1,8 +1,13 @@
 .section-features {
-  margin: 120px 0;
+  margin-top: 100px;
   display: flex;
   align-items: center;
-  border-top: 1px solid var(--background-alt-color);
+  @media only screen and (max-width: $tablet) {
+    margin-top: 60px;
+  }
+  @media only screen and (max-width: $mobile) {
+    margin-top: 40px;
+  }
 }
 
 .features {
@@ -41,6 +46,9 @@
     .feature__image { order: 1; margin-bottom: 20px; } /* image will be placed second */
     .feature__content { order: 2; }
   }
+  @media only screen and (max-width: $mobile) {
+    margin: 20px 0;
+  }
 }
 
 .feature__image {
@@ -53,7 +61,6 @@
     height: auto;
     object-fit: contain;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   @media only screen and (max-width: $desktop) {

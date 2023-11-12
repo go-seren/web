@@ -1,4 +1,4 @@
 baseURL = 'https://goseren.com'
 languageCode = 'en-us'
-title = 'Seren: AI Chat Journal'
+title = 'Seren'
 theme = 'hilton'

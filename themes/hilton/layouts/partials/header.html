@@ -28,6 +28,7 @@
               {{ if .HasChildren }}
                 <li class="nav__item dropdown">
                   <span class="nav__link dropdown-toggle">{{ .Name }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
+                  <span class="nav__link dropdown-toggle">{{ .Name }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
                   <div class="dropdown-menu">
                     {{ range .Children }}
                     {{ $childURL := .URL | absLangURL }}
@@ -50,6 +51,29 @@
             </ul>
           </div>
         </nav>
+        <div class="nav-button">
+          <i class="nav__icon icon__menu ion ion-md-menu"></i>
+
+          {{ if eq .Site.Params.color_scheme "auto" }}
+          <div class="toggle-theme toggle-theme-js">
+            <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon"></i></div>
+            <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny"></i></div>
+          </div>
+          {{ else if eq .Site.Params.color_scheme "light" }}
+          <div class="toggle-theme theme-light">
+            <div class="toggle-sun" title="Light mode"><i class="ion ion-ios-sunny"></i></div>
+          </div>
+          {{ else if eq .Site.Params.color_scheme "dark" }}
+          <div class="toggle-theme theme-dark">
+            <div class="toggle-moon" title="Dark mode"><i class="ion ion-ios-moon"></i></div>
+          </div>
+          {{ else }}
+          <div class="toggle-theme toggle-theme-js">
+            <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon"></i></div>
+            <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny"></i></div>
+          </div>
+          {{ end }}
+        </div>
       </div>
     </div>
   </div>
