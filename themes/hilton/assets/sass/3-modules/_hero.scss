@@ -84,6 +84,10 @@
     .store-image {
       height: 50px;
       margin-right: 20px;
+
+      &.extra-margin {
+        margin-top: 20px;
+      }
     }
   }
 }
